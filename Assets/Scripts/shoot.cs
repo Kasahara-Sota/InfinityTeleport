@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class shoot : MonoBehaviour
 {
@@ -23,12 +24,6 @@ public class shoot : MonoBehaviour
             newObject.transform.position = m_muzzle.transform.position;
             newObject.GetComponent<Rigidbody2D>().AddForce((m_muzzle.position-transform.position).normalized*speed);
         }
-
-    }
-    public void teleport()
-    {
-        
-        ball = GetComponent<BallController>();
-        transform.position = new Vector2(ball.pos.x,ball.pos.y);
+        //transform.Translate(0f,-0.01f,0f);
     }
 }

@@ -26,6 +26,7 @@ public class BallController : MonoBehaviour
         pos = this.transform.position;
         GameObject player = GameObject.FindWithTag("Player");
         player.transform.position = pos;
+        player.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         Destroy(this.gameObject);
     }
 }
