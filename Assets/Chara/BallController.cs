@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class BallController : MonoBehaviour
@@ -22,11 +23,15 @@ public class BallController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("a");
-        pos = this.transform.position;
-        GameObject player = GameObject.FindWithTag("Player");
-        player.transform.position = pos;
-        player.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
-        Destroy(this.gameObject);
+        if (collision.gameObject.CompareTag("Map") || collision.gameObject.CompareTag("Enemy"))
+        {
+            Vector2 normal = collision.contacts[0].normal;
+            this.pos = this.transform.position;
+            GameObject player = GameObject.FindWithTag("Player");
+            player.transform.position = pos+new Vector2 (normal.x*0.4f,normal.y*0.4f);
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            Destroy(this.gameObject);
+            shoot.timer +=shoot.interval;
+        }
     }
 }
