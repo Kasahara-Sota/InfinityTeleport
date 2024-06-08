@@ -17,6 +17,5 @@ public class Rotate : MonoBehaviour
         
         rotatez += speed;
         transform.rotation = Quaternion.Euler(0, 0, rotatez);
-        Debug.Log(rotatez);
     }
 }

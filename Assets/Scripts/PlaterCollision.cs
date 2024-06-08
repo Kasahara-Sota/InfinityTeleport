@@ -13,7 +13,7 @@ public class PlaterCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(nextScene.count);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
