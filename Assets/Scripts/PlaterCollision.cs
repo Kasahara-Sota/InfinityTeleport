@@ -21,5 +21,9 @@ public class PlaterCollision : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if(collision.gameObject.tag =="Door")
+        {
+            
+        }
     }
 }

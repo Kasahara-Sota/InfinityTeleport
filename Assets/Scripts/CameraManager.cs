@@ -14,7 +14,7 @@ public class CameraManager : MonoBehaviour
     public float right = 5f;
     public float bottom = -5f;
     public float top = 5f;
-
+    [SerializeField] float lerpe ;
     private Vector3 lerpedPosition;
 
     private Camera _camera;
@@ -30,7 +30,7 @@ public class CameraManager : MonoBehaviour
         if (target != null)
         {
             // Find the right position between the camera and the object
-            lerpedPosition = Vector3.Lerp(transform.position, target.position, Time.deltaTime * 10f);
+            lerpedPosition = Vector3.Lerp(transform.position, target.position, Time.deltaTime * lerpe);
             lerpedPosition.z = -10f;
         }
     }

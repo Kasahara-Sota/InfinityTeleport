@@ -23,7 +23,7 @@ public class BallController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Map") || collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Map") || collision.gameObject.CompareTag("Enemy")|| collision.gameObject.CompareTag("Door"))
         {
             Vector2 normal = collision.contacts[0].normal;
             this.pos = this.transform.position;
