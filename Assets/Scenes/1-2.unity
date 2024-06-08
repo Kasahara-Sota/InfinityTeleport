@@ -7350,6 +7350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackParticle
       objectReference: {fileID: 0}
+    - target: {fileID: 7876060348781622832, guid: 6be5c5ef1eaa7454180c5d72d581c20e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
