@@ -4038,9 +4038,9 @@ GameObject:
   m_Component:
   - component: {fileID: 620871830}
   - component: {fileID: 620871829}
-  - component: {fileID: 620871828}
   - component: {fileID: 620871827}
   - component: {fileID: 620871826}
+  - component: {fileID: 620871831}
   m_Layer: 7
   m_Name: "\u6E262"
   m_TagString: Door
@@ -4096,18 +4096,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.65
---- !u!114 &620871828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 620871825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c016598c6c854b14f99f4f766741e7aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &620871829
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4175,6 +4163,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &620871831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620871825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e94433f6b06e2e4d8758cd8bb13ec95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &749570885 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6325471503311041022, guid: 93d9c44d6b1936d4a992a618c301c507, type: 3}

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Diagnostics;
 using UnityEngine.TextCore.Text;
-using static UnityEditor.PlayerSettings;
 
 public class Turn : MonoBehaviour
 {
