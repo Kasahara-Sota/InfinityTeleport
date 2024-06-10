@@ -579,6 +579,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93d9c44d6b1936d4a992a618c301c507, type: 3}
+--- !u!4 &218972778 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7447612137674312267, guid: 93d9c44d6b1936d4a992a618c301c507, type: 3}
+  m_PrefabInstance: {fileID: 218972777}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &301329189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -750,11 +755,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a36255bf00dfbdc4b810f0308eaa9278, type: 3}
---- !u!4 &563768046 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6325471503311041022, guid: 93d9c44d6b1936d4a992a618c301c507, type: 3}
-  m_PrefabInstance: {fileID: 218972777}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &669006126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,7 +1462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e2ed53d8ca76984696aecfc84bc8997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 563768046}
+  target: {fileID: 218972778}
   limitBounds: 1
   left: -10
   right: 25
