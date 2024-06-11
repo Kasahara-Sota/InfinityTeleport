@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class shoot : MonoBehaviour
 {
     [SerializeField] Transform m_muzzle = default;
-    [SerializeField] int speed;
+    public int speed;
     public GameObject prefabToSpawn;
     BallController ball;
     public float timer = 0;
