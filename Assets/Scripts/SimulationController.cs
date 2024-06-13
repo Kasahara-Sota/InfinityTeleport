@@ -53,7 +53,7 @@ public class SimulationController : MonoBehaviour
         Debug.Log(_pos);
         ghost.GetComponent<Rigidbody2D>().AddForce((_pos - GameObject.Find("player").GetComponent<Transform>().position).normalized * GameObject.Find("player").GetComponent<shoot>().speed);
         Debug.Log("aaa");
-        SceneManager.MoveGameObjectToScene(ghost.gameObject, m_simulationScene);
+        SceneManager.MoveGameObjectToScene(ghost.gameObject, SceneManager.GetActiveScene());
 
         m_line.positionCount = m_iMaxPhysicsFrame;
 
