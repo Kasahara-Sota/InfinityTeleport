@@ -32,7 +32,9 @@ public class BallController : MonoBehaviour
             {
                 player.transform.position = pos + new Vector2(normal.x * 0.4f, normal.y * 0.4f);
                 player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            }          
+            }
+            AudioSource audio = GetComponent<AudioSource>();
+            AudioSource.PlayClipAtPoint(audio.clip, Vector3.zero);
             Destroy(this.gameObject);
             shoot.timer +=shoot.interval;
         }
