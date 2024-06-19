@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlaterCollision : MonoBehaviour
 {
+    [SerializeField] Vector2 SpawnPosition;
     void Update()
     {
 
@@ -15,10 +16,11 @@ public class PlaterCollision : MonoBehaviour
         {
             //Destroy(this.gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //transform.position = SpawnPosition;
         }
-        if(collision.gameObject.tag =="Door")
+        if(collision.gameObject.tag =="Star")
         {
-            
+            Destroy(collision.gameObject);
         }
     }
 }
