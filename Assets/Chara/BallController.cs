@@ -23,16 +23,18 @@ public class BallController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Map") || collision.gameObject.CompareTag("Door"))
+        if (collision.gameObject.CompareTag("Map") || collision.gameObject.CompareTag("Door")||collision.gameObject.CompareTag("Star"))
         {
             Vector2 normal = collision.contacts[0].normal;
             this.pos = this.transform.position;
             GameObject player = GameObject.FindWithTag("Player");
+
             if(player != null)
             {
                 player.transform.position = pos + new Vector2(normal.x * 0.4f, normal.y * 0.4f);
                 player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             }
+
             AudioSource audio = GetComponent<AudioSource>();
             AudioSource.PlayClipAtPoint(audio.clip, Vector3.zero);
             Destroy(this.gameObject);

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlaterCollision : MonoBehaviour
 {
+    public int _count = 0;
     [SerializeField] Vector2 SpawnPosition;
     void Update()
     {
@@ -20,6 +21,7 @@ public class PlaterCollision : MonoBehaviour
         }
         if(collision.gameObject.tag =="Star")
         {
+            _count++;
             Destroy(collision.gameObject);
         }
     }
