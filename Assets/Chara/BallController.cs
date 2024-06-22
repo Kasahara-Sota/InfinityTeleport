@@ -7,7 +7,7 @@ public class BallController : MonoBehaviour
 {
     public Vector2 pos;
     shoot shoot;
-
+    [SerializeField] GameObject _spawnPrefav;
     void Start()
     {
         shoot = FindFirstObjectByType<shoot>();
@@ -28,7 +28,7 @@ public class BallController : MonoBehaviour
             Vector2 normal = collision.contacts[0].normal;
             this.pos = this.transform.position;
             GameObject player = GameObject.FindWithTag("Player");
-
+            Instantiate(_spawnPrefav, pos, Quaternion.identity);
             if(player != null)
             {
                 player.transform.position = pos + new Vector2(normal.x * 0.4f, normal.y * 0.4f);

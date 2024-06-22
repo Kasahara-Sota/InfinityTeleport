@@ -147,3 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e94433f6b06e2e4d8758cd8bb13ec95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _starCountText: {fileID: 0}
+  _ClearTimeText: {fileID: 0}
+  _playerCollision: {fileID: 6453385485617707634, guid: 93d9c44d6b1936d4a992a618c301c507, type: 3}
