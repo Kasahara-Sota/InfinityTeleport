@@ -7,10 +7,12 @@ public class BallController : MonoBehaviour
 {
     public Vector2 pos;
     shoot shoot;
+    Turn turn;
     [SerializeField] GameObject _spawnPrefav;
     void Start()
     {
         shoot = FindFirstObjectByType<shoot>();
+        turn = FindFirstObjectByType<Turn>();
         pos = this.transform.position;
     }
 
@@ -39,6 +41,7 @@ public class BallController : MonoBehaviour
             AudioSource.PlayClipAtPoint(audio.clip, Vector3.zero);
             Destroy(this.gameObject);
             shoot.timer +=shoot.interval;
+            turn.timer += turn._interval;
         }
     }
 }
