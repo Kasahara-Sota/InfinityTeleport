@@ -38,7 +38,6 @@ public class Turn : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") &&timer >= _interval)
         {
-            Debug.Log("ok");
             m_audio.Play();
             timer = 0;
         }
