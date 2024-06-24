@@ -28,9 +28,9 @@ public class nextScene : MonoBehaviour
         _playerCollision = GameObject.FindObjectOfType<MyCollisionDetector>();
         int time = (int)MyCollisionDetector._timer;
         if (_starCountText != null)
-            _starCountText.text = $"{Star.StarCount}個のキューブを集めました";
+            _starCountText.text = $"GET {Star.StarCount} CUBEs";
         if (_ClearTimeText != null)
-            _ClearTimeText.GetComponent<Text>().text = $"クリアタイム {time/60}:{time%60}";
+            _ClearTimeText.GetComponent<Text>().text = $"TIME {time/60}:{time%60}";
     }
     //private void Update()
     //{
