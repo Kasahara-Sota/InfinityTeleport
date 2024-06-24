@@ -20,8 +20,11 @@ public class MyCollisionDetector : MonoBehaviour
         if(collision.gameObject.tag  == "Enemy")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-        if(collision.gameObject.tag =="Star")
+        }       
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Star")
         {
             Count++;
             Destroy(collision.gameObject);

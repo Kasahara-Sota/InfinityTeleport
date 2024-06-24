@@ -32,11 +32,11 @@ public class nextScene : MonoBehaviour
         if (_ClearTimeText != null)
             _ClearTimeText.GetComponent<Text>().text = $"クリアタイム {time/60}:{time%60}";
     }
-    private void Update()
-    {
-        if (_playerCollision is not null)
-            Debug.Log($"追加する星の数{_playerCollision.Count}");
-    }
+    //private void Update()
+    //{
+    //    if (_playerCollision is not null)
+    //        Debug.Log($"追加する星の数{_playerCollision.Count}");
+    //}
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player" && load == false)

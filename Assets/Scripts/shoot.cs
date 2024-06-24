@@ -11,11 +11,6 @@ public class shoot : MonoBehaviour
     BallController ball;
     public float timer = 0;
     public float interval = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -23,6 +18,7 @@ public class shoot : MonoBehaviour
         if(Input.GetButtonDown("Fire1")&&timer>=interval)
         {
             GameObject newObject = Instantiate<GameObject>(prefabToSpawn);
+
             newObject.transform.position = m_muzzle.transform.position;
             newObject.GetComponent<Rigidbody2D>().AddForce((m_muzzle.position-transform.position).normalized*speed);
             timer = 0;

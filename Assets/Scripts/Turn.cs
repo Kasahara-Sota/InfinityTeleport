@@ -11,13 +11,15 @@ public class Turn : MonoBehaviour
     Vector3 mousePos;
     Vector3 target;
     private Vector3 position;
-
+    public float timer = 0;
+    public float _interval = 0;
+    AudioSource m_audio = default;
     void Start()
     {
-        //transform = transform.GetComponent<Transform>();
+        m_audio = GetComponent<AudioSource>();
     }
 
-    
+
     void Update()
     {
         // プレイヤーのスクリーン座標を計算する
@@ -33,6 +35,15 @@ public class Turn : MonoBehaviour
         var angles = transform.localEulerAngles;
         angles.z = angle;
         transform.localEulerAngles = angles;
+
+        if (Input.GetButtonDown("Fire1") &&timer >= _interval)
+        {
+            Debug.Log("ok");
+            m_audio.Play();
+            timer = 0;
+        }
+
+        timer += Time.deltaTime;
     }
 
     public static float GetAngle(Vector2 from, Vector2 to)
